@@ -178,3 +178,41 @@ switch(input){
       console.log(obj,name);
       obj.name = 'David';
       console.log(obj,name);
+
+    function notifyResize() {
+      let window = window.innerWidth;
+      let windowHeight = window.innerHeight;
+      console.log(window,windowHeight);
+    }
+
+
+
+    const BASE_COLOR = 'rgb(52,73,94');
+    const BASE_COLOR_COLOR = "green";
+    function handleClick(){
+      let current color = title.style.color;
+      if (current color === BASE_COLOR){
+        title.style.color = BASE_COLOR_COLOR;
+      } else {
+        title.style.color = BASE_COLOR_COLOR;
+      }
+  }
+
+    title.addEventListener('mouseenter',handleClick);
+
+    //컬러가 4개 이상 들어가있는 배열을 만들고 특정 컬러 이벤트를 통해 팬덤으로 컬러가 되도록 만들어 보세요.
+
+    var colors = ['red', 'blue', 'green', 'yellow', 'purple'];
+
+  function setColorToFandom(colorEvent) {
+  var randomColorIndex = Math.floor(Math.random() * colors.length);
+  var fandomColor = colors[randomColorIndex];
+  
+  console.log("이벤트 발생: " + colorEvent);
+  console.log("팬덤 컬러: " + fandomColor);
+}
+
+// 특정 컬러 이벤트 발생 시 팬덤 컬러로 변경
+setColorToFandom('Click Event');
+setColorToFandom('Hover Event');
+setColorToFandom('Scroll Event');
