@@ -165,4 +165,16 @@ switch(input){
           console.log(i);
         }
       }
-      
+
+      let title = document.getElementById("title");
+      console.log(title.style.color);
+      title.style.color = 'red';
+
+      let obj={
+        name: "Ian",
+        age:34
+      }
+
+      console.log(obj,name);
+      obj.name = 'David';
+      console.log(obj,name);
