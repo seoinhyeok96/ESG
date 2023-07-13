@@ -155,19 +155,14 @@ switch(input){
       //3과 5의 배수면 'fizzbuzz'출력
       //나머진 숫자 그대로 출력      
       for (var i = 1; i <= 30; i++) {
-        var output = "";
-      
-        if (i % 3 === 0) {
-          output += "fizz";
+        if (i % 3 === 0 && i % 5 === 0) {
+          console.log("fizzbuzz");
+        } else if (i % 3 === 0) {
+          console.log("fizz");
+        } else if (i % 5 === 0) {
+          console.log("buzz");
+        } else {
+          console.log(i);
         }
-      
-        if (i % 5 === 0) {
-          output += "buzz";
-        }
-      
-        if (output === "") {
-          output = i;
-        }
-      
-        console.log(output);
       }
+      
