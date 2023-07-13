@@ -124,3 +124,27 @@ switch(input){
       var numbers = [5, 8, 2, 10, 3];
       var secondMax = findSecondMaxValue(numbers);
       console.log("두 번째로 큰 값:", secondMax); // 출력: 두 번째로 큰 값: 8
+
+
+
+      //구구단 만들기
+      function generateMultiplicationTable(number) {
+        if (isNaN(number)) {
+          console.log("올바른 숫자를 입력하세요.");
+          return;
+        }
+      
+        console.log(number + "단 구구단:");
+      
+        for (var i = 1; i <= 9; i++) {
+          var result = number * i;
+          console.log(number + " x " + i + " = " + result);
+        }
+      }
+      
+      // 사용자로부터 숫자 입력 받기
+      var input = prompt("구구단을 출력할 숫자를 입력하세요:");
+      
+      // 구구단 생성 함수 호출
+      generateMultiplicationTable(parseInt(input));
+      
