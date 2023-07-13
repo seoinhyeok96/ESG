@@ -147,4 +147,27 @@ switch(input){
       
       // 구구단 생성 함수 호출
       generateMultiplicationTable(parseInt(input));
+
+
+      //1부터 30까지 숫자를 돌면서
+      //3의 배수면 'fizz'출력
+      //5의 배수면 'buzz'출력
+      //3과 5의 배수면 'fizzbuzz'출력
+      //나머진 숫자 그대로 출력      
+      for (var i = 1; i <= 30; i++) {
+        var output = "";
       
+        if (i % 3 === 0) {
+          output += "fizz";
+        }
+      
+        if (i % 5 === 0) {
+          output += "buzz";
+        }
+      
+        if (output === "") {
+          output = i;
+        }
+      
+        console.log(output);
+      }
