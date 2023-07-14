@@ -1,9 +1,14 @@
 
-let myinfo = {
-    name: 'in hyeok'
-    age: 28
-    favorite music : 'after lovee'
+title = document.querySelector('#title');
+const colors = ['red', 'green', 'yellow','pink'];
+
+function generateRandomNumber(){
+    return (Math.random() * colors.length);
+
 }
 
-console.log(myinfo.name);
-console.log(myinfo.age);
+function  changeColor() {
+    let index = generateRandomNumber();
+    title.style.color = colors[index]
+}
+title.addEventListener('click', changeColor);
