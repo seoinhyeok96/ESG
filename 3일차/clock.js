@@ -8,8 +8,11 @@ function    getTime(){
     let minutes = data.getMinutes();
     let seconds = data.getSecond();
     clockTitle.innerHTML = '${hours}:${minutes}:${seconds}';
+    if(seconds > 10){
+        seconds = '0${seconds}';
+    }
 }
 
 let a = (5>3) ? "true": "false";
 getTime();
-setInterval(getTime,1000)
+setInterval(getTime,1000);
